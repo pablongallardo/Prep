@@ -33,7 +33,7 @@ function dePalabrasAFrase(palabras) {
   // Tu código:
     var frase = palabras[0];
     for (var i = 1; i < palabras.length; i++) {
-      frase = frase + '' + palabras[i];
+      frase = frase + ' ' + palabras[i];
     
     }
       return frase;
@@ -82,6 +82,7 @@ function multiplicarArgumentos() {
   // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
   // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
   // Tu código:
+
       if(arguments.length === 0){
         return 0;
       }
@@ -145,16 +146,16 @@ function breakStatement(numero) {
   // devolver: "Se interrumpió la ejecución"
   // Pista: usá el statement 'break'
   // Tu código:
-    nuevoArray = [];
+     var nuevoArray = [];
     for (var i = 0; i < 10; i++) {
-      numero = numero +2;
-      if(numero === 1) {
+      numero = numero + 2;
+      if(numero === i) {
         break;
       }
       nuevoArray.push(numero);
     }
     if(i < 10){
-      return 'Se interrumpió la ejecución'
+      return 'Se interrumpió la ejecución';
     }
       return nuevoArray;
 }
@@ -167,7 +168,8 @@ function continueStatement(numero) {
   // y se continua con la siguiente iteración
   // Pista: usá el statement 'continue'
   // Tu código:
-  for (let i = 0; i < 10; i++) {
+      var nuevoArr = [];
+  for (var i = 0; i < 10; i++) {
     numero = numero +2;
     if( i === 5){
       continue;
